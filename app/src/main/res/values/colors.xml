@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#ff000000</color>
+    <color name="color_bg">#191851</color>
+    <color name="color_button">#721fff</color>
+    <color name="color_card">#070649</color>
+    <color name="color_circle">#4f21ab</color>
+    <color name="color_settings">#191851</color>
+    <color name="color_spinner">#989898</color>
+    <color name="color_toolbar">#060549</color>
+    <color name="color_tut_card">#313c4b</color>
+    <color name="purple_500">#ff6200ee</color>
+    <color name="purple_700">#000000</color>
+    <color name="teal_200">#ff03dac5</color>
+    <color name="teal_700">#ff018786</color>
+    <color name="white">#ffffffff</color>
+</resources>

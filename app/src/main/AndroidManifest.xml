@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.USES_POLICY_FORCE_LOCK" />
+    <uses-permission android:name="android.permission.ACTION_MANAGE_OVERLAY_PERMISSION" />
+
+    <application
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BatteryChargerAnim"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.OtherPermissionActivity"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.LockScreenAnimActivity"
+            android:theme="@style/Theme.BatteryChargerAnim"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.Tutorial3Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.Tutorial2Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.Tutorial1Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.PreviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.ListActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.SplashActivity"
+            android:screenOrientation="portrait"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.activities.MainActivity"
+            android:screenOrientation="portrait" />
+
+        <service android:name="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.service.MyService" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.mobilefastcharger.batterycharginganimationscreen.chargingshow.flashing.light.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+    </application>
+
+</manifest>
